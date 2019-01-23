@@ -1,5 +1,5 @@
 // See LICENSE for license details.
-package sifive.freedom.everywhere.artyS7
+package sifive.freedom.everywhere.arty_S7_50
 
 import Chisel._
 import chisel3.core.{attach}
@@ -11,7 +11,7 @@ import freechips.rocketchip.diplomacy.{LazyModule}
 import sifive.blocks.devices.gpio._
 import sifive.blocks.devices.spi._
 
-import sifive.fpgashells.shell.xilinx.artyshell.{ArtyShell}
+import sifive.fpgashells.shell.xilinx.artyshells7.{ArtyShellS7}
 import sifive.fpgashells.ip.xilinx.{IBUFG, IOBUF, PULLUP, PowerOnResetFPGAOnly}
 
 //-------------------------------------------------------------------------
@@ -144,11 +144,6 @@ class ArtyS7DevKitFPGAChip(implicit override val p: Parameters) extends ArtyShel
     IOBUF(led1_r, dut.io.pins.gpio.pins(19))
     IOBUF(led1_g, dut.io.pins.gpio.pins(21))
     IOBUF(led1_b, dut.io.pins.gpio.pins(22))
-
-    // and RGB LED2 R,G,B inputs = PWM2(1,2,3) when iof_1 is active
-    IOBUF(led2_r, dut.io.pins.gpio.pins(11))
-    IOBUF(led2_g, dut.io.pins.gpio.pins(12))
-    IOBUF(led2_b, dut.io.pins.gpio.pins(13))
 
     // Only 19 out of 20 shield pins connected to GPIO pins
     // Shield pin A5 (pin 14) left unconnected

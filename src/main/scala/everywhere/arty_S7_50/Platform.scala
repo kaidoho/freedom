@@ -1,5 +1,5 @@
 // See LICENSE for license details.
-package sifive.freedom.everywhere.artyS7
+package sifive.freedom.everywhere.arty_S7_50
 
 import Chisel._
 
