@@ -1,12 +1,12 @@
 # See LICENSE for license details.
 base_dir := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
-BUILD_DIR := $(base_dir)/builds/artyS7
+BUILD_DIR := $(base_dir)/builds/arty_S7_50
 FPGA_DIR := $(base_dir)/fpga-shells/xilinx
 MODEL := ArtyS7DevKitFPGAChip
-PROJECT := sifive.freedom.everywhere.artyS7
-export CONFIG_PROJECT := sifive.freedom.everywhere.artyS7
+PROJECT := sifive.freedom.everywhere.arty_S7_50
+export CONFIG_PROJECT := sifive.freedom.everywhere.arty_S7_50
 export CONFIG := ArtyS7DevKitConfig
-export BOARD := arty
+export BOARD := arty_s7_50
 export BOOTROM_DIR := $(base_dir)/bootrom/xip
 
 rocketchip_dir := $(base_dir)/rocket-chip
