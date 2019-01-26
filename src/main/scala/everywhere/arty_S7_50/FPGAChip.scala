@@ -18,7 +18,7 @@ import sifive.fpgashells.ip.xilinx.{IBUFG, IOBUF, PULLUP, PowerOnResetFPGAOnly}
 // ArtyS7DevKitFPGAChip
 //-------------------------------------------------------------------------
 
-class ArtyS7DevKitFPGAChip(implicit override val p: Parameters) extends ArtyShell {
+class ArtyS7DevKitFPGAChip(implicit override val p: Parameters) extends ArtyShellS7 {
 
   //-----------------------------------------------------------------------
   // Clock divider
