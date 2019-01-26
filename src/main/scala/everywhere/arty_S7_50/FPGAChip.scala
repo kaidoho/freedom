@@ -56,19 +56,19 @@ class ArtyS7DevKitFPGAChip(implicit override val p: Parameters) extends ArtyShel
     // JTAG IOBUFs
     //---------------------------------------------------------------------
 
-    dut.io.pins.jtag.TCK.i.ival := IBUFG(IOBUF(jd_2).asClock).asUInt
+    dut.io.pins.jtag.TCK.i.ival := IBUFG(IOBUF(jb_6).asClock).asUInt
 
-    IOBUF(jd_5, dut.io.pins.jtag.TMS)
-    PULLUP(jd_5)
+    IOBUF(jb_5, dut.io.pins.jtag.TMS)
+    PULLUP(jb_5)
 
-    IOBUF(jd_4, dut.io.pins.jtag.TDI)
-    PULLUP(jd_4)
+    IOBUF(jb_4, dut.io.pins.jtag.TDI)
+    PULLUP(jb_4)
 
-    IOBUF(jd_0, dut.io.pins.jtag.TDO)
+    IOBUF(jb_0, dut.io.pins.jtag.TDO)
 
     // mimic putting a pullup on this line (part of reset vote)
-    SRST_n := IOBUF(jd_6)
-    PULLUP(jd_6)
+    SRST_n := IOBUF(jb_2)
+    PULLUP(jb_2)
 
     // jtag reset
     val jtag_power_on_reset = PowerOnResetFPGAOnly(clock_32MHz)
