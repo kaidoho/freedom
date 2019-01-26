@@ -116,10 +116,10 @@ class ArtyS7DevKitFPGAChip(implicit override val p: Parameters) extends ArtyShel
     // Header row 1: PB0-PB5
     IOBUF(ck_io(8),  dut.io.pins.gpio.pins(0))  // PWM0(0)
     IOBUF(ck_io(9),  dut.io.pins.gpio.pins(1))  // PWM0(1)
-    IOBUF(ck_io(10), dut.io.pins.gpio.pins(2))  // SPI CS(0) / PWM0(2)
-    IOBUF(ck_io(11), dut.io.pins.gpio.pins(3))  // SPI MOSI  / PWM0(3)
-    IOBUF(ck_io(12), dut.io.pins.gpio.pins(4))  // SPI MISO
-    IOBUF(ck_io(13), dut.io.pins.gpio.pins(5))  // SPI SCK
+   // IOBUF(ck_io(10), dut.io.pins.gpio.pins(2))  // SPI CS(0) / PWM0(2)
+   // IOBUF(ck_io(11), dut.io.pins.gpio.pins(3))  // SPI MOSI  / PWM0(3)
+   // IOBUF(ck_io(12), dut.io.pins.gpio.pins(4))  // SPI MISO
+   // IOBUF(ck_io(13), dut.io.pins.gpio.pins(5))  // SPI SCK
 
     dut.io.pins.gpio.pins(6).i.ival  := 0.U
     dut.io.pins.gpio.pins(7).i.ival  := 0.U
@@ -127,11 +127,11 @@ class ArtyS7DevKitFPGAChip(implicit override val p: Parameters) extends ArtyShel
 
     // Header row 3: A0-A5 (we don't support using them as analog inputs)
     // just treat them as regular digital GPIOs
-    IOBUF(ck_io(15), dut.io.pins.gpio.pins(9))  // A1 = CS(2)
-    IOBUF(ck_io(16), dut.io.pins.gpio.pins(10)) // A2 = CS(3) / PWM2(0)
-    IOBUF(ck_io(17), dut.io.pins.gpio.pins(11)) // A3 = PWM2(1)
-    IOBUF(ck_io(18), dut.io.pins.gpio.pins(12)) // A4 = PWM2(2) / SDA
-    IOBUF(ck_io(19), dut.io.pins.gpio.pins(13)) // A5 = PWM2(3) / SCL
+    IOBUF(ck_io(11), dut.io.pins.gpio.pins(9))  // A1 = CS(2)
+    IOBUF(ck_io(12), dut.io.pins.gpio.pins(10)) // A2 = CS(3) / PWM2(0)
+    IOBUF(ck_io(13), dut.io.pins.gpio.pins(11)) // A3 = PWM2(1)
+    IOBUF(ck_io(14), dut.io.pins.gpio.pins(12)) // A4 = PWM2(2) / SDA
+    IOBUF(ck_io(15), dut.io.pins.gpio.pins(13)) // A5 = PWM2(3) / SCL
 
     // Mirror outputs of GPIOs with PWM peripherals to RGB LEDs on Arty
     // assign RGB LED0 R,G,B inputs = PWM0(1,2,3) when iof_1 is active
