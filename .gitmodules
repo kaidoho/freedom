@@ -1,6 +1,7 @@
 [submodule "rocket-chip"]
 	path = rocket-chip
 	url = https://github.com/kaidoho/rocket-chip.git
+	branch = tdays
 [submodule "sifive-blocks"]
 	path = sifive-blocks
 	url = https://github.com/sifive/sifive-blocks.git
