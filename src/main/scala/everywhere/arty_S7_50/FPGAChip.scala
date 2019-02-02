@@ -11,7 +11,7 @@ import freechips.rocketchip.diplomacy.{LazyModule}
 import sifive.blocks.devices.gpio._
 import sifive.blocks.devices.spi._
 
-import sifive.fpgashells.shell.xilinx.artyshells7.{ArtyShellS7,HasDDR3}
+import sifive.fpgashells.shell.xilinx.artyshells7.{ArtyShellS7}
 import sifive.fpgashells.ip.xilinx.{IBUFG, IOBUF, PULLUP, PowerOnResetFPGAOnly}
 
 //-------------------------------------------------------------------------
